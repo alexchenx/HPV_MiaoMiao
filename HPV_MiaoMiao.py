@@ -30,6 +30,7 @@ def QiangYiMiao():
 
     logger("点击首页")
     device.click(270.0, 2142.0)  # 点击 首页
+    time.sleep(1)  # 休息1秒，等待页面反应过来
 
     logger("点击进入抢购页面")
     device.click(890.0, 862.0)
