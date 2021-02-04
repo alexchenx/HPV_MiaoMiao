@@ -6,13 +6,16 @@ now = time.strftime("%Y-%m-%d %H:%M:%S.", time.localtime())
 
 
 def logger(msg):
-    time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    print(time, msg)
+    current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+    print(current_time, msg)
 
 
 def QiangYiMiao():
     logger("通过USB连接手机")
     device = u2.connect_usb()
+
+    # logger("通过WiFi连接手机")
+    # d = u2.connect('192.168.0.102')
 
     logger("停止微信")
     device.app_stop("com.tencent.mm")
