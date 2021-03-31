@@ -15,7 +15,7 @@ def QiangYiMiao():
     device = u2.connect_usb()
 
     # logger("通过WiFi连接手机")
-    # d = u2.connect('192.168.0.102')
+    # device = u2.connect('192.168.0.106')
 
     logger("停止微信")
     device.app_stop("com.tencent.mm")
@@ -26,7 +26,7 @@ def QiangYiMiao():
     time.sleep(5)  # 休息3秒，等待启动
 
     logger("点击 发现")
-    device(text="发现").click()
+    device.click(682, 2171)
     time.sleep(1)
 
     logger("点击 小程序")
